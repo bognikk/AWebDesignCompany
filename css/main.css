@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+body {
+  display: flex;
+  flex-flow: column wrap; }
+
+.top {
+  width: 100%;
+  height: 4em;
+  padding: .5em 15%;
+  display: flex;
+  justify-content: space-between; }
+  .top .avatarContainer {
+    height: 100%;
+    border-radius: 50%;
+    overflow: hidden; }
+    .top .avatarContainer img {
+      height: 100%; }
+      .top .avatarContainer img:hover {
+        -webkit-transform: scale(1.2);
+        -moz-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+        -o-transform: scale(1.2);
+        transform: scale(1.2); }
+  .top nav {
+    margin-top: 1.2em; }
+    .top nav a {
+      text-decoration: none;
+      color: #555;
+      margin-right: 1em; }
+      .top nav a:hover {
+        color: #72ccc4; }
+
+section {
+  width: 100%;
+  padding: 7.5em 20%; }
+
+.intro {
+  height: 40em;
+  background: #e26868;
+  padding: 0; }
+  .intro h1 {
+    color: #555;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 5em auto 0;
+    font-size: 2em; }
+
+.services {
+  background: #4a3f60;
+  display: flex;
+  flex-flow: row wrap; }
+  .services .column {
+    display: flex;
+    flex-flow: row wrap;
+    width: 50%;
+    margin-bottom: 5em; }
+    .services .column .serviceImage {
+      height: 120px;
+      width: 120px;
+      padding-top: 28px;
+      border-radius: 50%;
+      background: #443959; }
+      .services .column .serviceImage img {
+        width: 60%;
+        display: block;
+        margin: 0 auto; }
+    .services .column h2 {
+      width: 70%;
+      color: #fff;
+      text-transform: uppercase;
+      text-align: left;
+      margin-top: 10%;
+      padding-left: 1em;
+      font-size: 1.2em; }
+
+.contact h1 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 2em; }
+.contact h2 {
+  text-align: center;
+  color: #a9a9a9;
+  font-size: 1.2em; }
+.contact .contactForm {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  width: 100%;
+  background: #eee;
+  border-radius: 6px;
+  margin: 20px auto;
+  padding: 20px; }
+  .contact .contactForm .contactInput {
+    width: 48%;
+    border-radius: 3px;
+    border: none;
+    color: #72ccc4;
+    height: 50px;
+    padding-left: 20px;
+    margin: 10px 0; }
+  .contact .contactForm textarea {
+    width: 100%;
+    border-radius: 3px;
+    border: none;
+    color: #72ccc4;
+    padding: 20px;
+    margin: 10px 0;
+    resize: none; }
+
+@media screen and (max-width: 1350px) {
+  .services .column .serviceImage {
+    margin: 0 auto; }
+  .services .column h2 {
+    width: 100%;
+    text-align: center;
+    padding: 0; } }
+@media screen and (max-width: 600px) {
+  .top {
+    padding: 0;
+    height: auto;
+    flex-direction: column; }
+    .top .avatarContainer {
+      height: 4em;
+      width: 4em;
+      margin: 0 auto; }
+    .top nav {
+      display: flex;
+      flex-direction: column; }
+      .top nav a {
+        width: 100%;
+        text-align: center;
+        padding: 0.5em; }
+
+  section {
+    padding: 5.5em 10%; }
+
+  .services .column {
+    width: 100%; }
+
+  .contact .contactForm .contactInput {
+    width: 100%; } }
+
+/*# sourceMappingURL=main.css.map */

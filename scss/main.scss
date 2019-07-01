@@ -1,0 +1,209 @@
+@import 'vars';
+@import 'mixins';
+
+@include main;
+
+
+body {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.top {
+    width: 100%;
+	height: 4em;
+    padding: .5em 15%;
+    display: flex;
+    justify-content: space-between;
+
+    .avatarContainer {
+		height: 100%;
+        border-radius: 50%;
+        overflow: hidden;
+
+        img {
+            height: 100%;
+
+            &:hover {
+                @include scale(1.2);
+            }
+        }
+    }
+
+    nav {
+        margin-top: 1.2em;
+
+        a { 
+            text-decoration: none; 
+            color: $text_color;
+            margin-right: 1em;
+    
+            &:hover {
+                color: $main_green;
+            }
+        }
+    }
+}
+
+section {
+	width: 100%;
+	padding: 7.5em 20%;
+}
+
+.intro {
+	height: 40em;
+	background: $main_red;
+	padding: 0;
+
+	h1 {
+		color: $text_color;
+		text-align: center;
+		text-transform: uppercase;
+		margin: 5em auto 0;
+		font-size: 2em;
+	}
+}
+
+.services {
+    background: $main_purple;
+    display: flex;
+    flex-flow: row wrap;
+
+
+	.column {
+        display: flex;
+        flex-flow: row wrap;
+        width: 50%;
+		margin-bottom: 5em;
+	
+		.serviceImage {
+			height: 120px;
+		    width: 120px;
+		    padding-top: 28px;
+			border-radius: 50%;
+			background: $purple_dark;
+
+			img {
+				width: 60%;
+				display: block;
+				margin: 0 auto;
+			}
+		}
+
+		h2 {
+			width: 70%;
+			color: #fff;
+			text-transform: uppercase;
+			text-align: left;
+			margin-top: 10%;
+			padding-left: 1em;
+			font-size: 1.2em;
+		}
+	}
+}
+
+.contact {
+
+	h1 {
+		text-align: center;
+		text-transform: uppercase;
+		font-size: 2em;
+	}
+
+	h2 {
+		text-align: center;
+		color: $subtitle_grey;
+		font-size: 1.2em;
+	}
+
+	.contactForm {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+		width: 100%;
+		background: $form_background;
+		border-radius: 6px;
+	    margin: 20px auto;
+	    padding: 20px;
+
+	    .contactInput {
+	    	width: 48%;
+	    	border-radius: 3px;
+	    	border: none;
+		    color: $main_green;
+		    height: 50px;
+            padding-left: 20px;
+            margin: 10px 0;
+	    }
+
+	    textarea {
+	    	width: 100%;
+	    	border-radius: 3px;
+	    	border: none;
+		    color: $main_green;
+		    padding: 20px;
+		    margin: 10px 0;
+		    resize: none;
+	    }
+	}
+}
+
+@media screen and (max-width: 1350px) {
+	
+	.services {
+		.column {
+			.serviceImage {
+				margin: 0 auto;
+			}
+
+			h2 {
+				width: 100%;
+				text-align: center;
+				padding: 0;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 600px) {
+	
+	.top {
+		padding: 0;
+        height: auto;
+        flex-direction: column;
+
+		.avatarContainer {
+			height: 4em;
+			width: 4em;
+			margin: 0 auto;
+        }
+        
+        nav {
+            display: flex;
+            flex-direction: column;
+
+            a {
+                width: 100%;
+                text-align: center;
+                padding: 0.5em;
+    
+            }    
+        }
+	}
+
+	section {
+		padding: 5.5em 10%;
+	}
+
+	.services {
+		.column {
+			width: 100%;
+		}
+	}
+
+	.contact {
+		.contactForm {
+			.contactInput { width: 100%; }
+		}
+	}
+}
